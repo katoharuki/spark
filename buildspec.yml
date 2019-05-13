@@ -8,6 +8,7 @@ phases:
     commands:
       - echo "install"
       - echo "test PR"
+      - echo "test network"
       - echo "`curl -X GET http://192.168.1.8:8080/web-app/`"
       - ping -c3 192.168.1.8
 #      - export PULL_REQUEST_ID=`echo ${CODEBUILD_SOURCE_VERSION} | sed -e 's/pr\///'`
