@@ -7,5 +7,10 @@ phases:
   build:
     commands:
       - echo "install"
+      - echo "test PR"
+      - echo "test network private subnet"
+      - echo "`curl -X GET http://192.168.1.8:8080/web-app/`"
+      - echo "test network public"
+      - echo "`curl --head https://beauty.hotpepper.jp/`"
 #      - export PULL_REQUEST_ID=`echo ${CODEBUILD_SOURCE_VERSION} | sed -e 's/pr\///'`
 #      - mvn sonar:sonar -Dsonar.login=${SONARQUBE_TOKEN} -Dsonar.github.oauth=${GITHUB_TOKEN} -Dsonar.github.pullRequest=${PULL_REQUEST_ID} -Dsonar.host.url=${SONARQUBE_ENDPOINT}
